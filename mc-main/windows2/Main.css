@@ -1,0 +1,240 @@
+/*navbar*/
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: antiquewhite;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(41, 139, 82);
+    display: flex;
+}
+
+.navList {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    /*ნებ. ელემენტს გაასწორებს ჰორიზონტალურად ნავ. ელემენტებს ამ სჰემთხვევაში */
+    /* flex-direction: column     ვერტიკალურად  */
+    margin: 0 20px;
+    align-items: center;
+    /* ელემენტებს აცენტრებს ვერტიკალურად*/
+    list-style: none;
+    /* სიის წერტილებს (ორნამენტები) აშორებს*/
+
+}
+
+.navItem {
+    padding: 10px 40px;
+    transition: 0.5s;
+    /* ანიმაციის დრო*/
+    margin: 0 10px;
+    /* დაშორება ტექსტს შორის*/
+    border-radius: 64px;
+    border: 3px solid;
+}
+
+/* hover მაუს რომიიტან ცვლილება*/
+.navItem:hover {
+    background-color: rgb(231, 74, 34);
+}
+
+.navItem>a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    /* ტექტის ორნამენტებს აშორებს*/
+}
+
+.navbar>img {
+    border-radius: 64px;
+    padding: 16px;
+}
+
+/*header*/
+
+.header {
+    width: 100%;
+    position: relative;
+    /*ერთ ელემენტს ადებს მეორეს ზევიდან */
+}
+
+.header>img {
+    width: 100%;
+    height: fit-content;
+    /* ჩაატიე სურათი (ყველადფერი) საუკეთესო ხარისხში*/
+}
+
+.header>.content {
+    position: absolute;
+    /*Top,Bottom,Right, Left  იმუშავებს მხოლოდ ამ კოდის მერე */
+    /*ერთ ელემენტს ადებს მეორეს ზევიდან */
+    top: 0;
+    /*თუ ელემენტი ქვევითაა და ზევით აწევა გვინდე*/
+    /*bottom: 0;
+    თუ ელემენტი ზევითაა და ქვევით ჩაწევა გვინდე */
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header>.content>h1 {
+    text-align: center;
+    font-size: 200px;
+    color: rgb(224, 43, 43);
+}
+
+/*card*/
+
+.container {
+    padding: 0 192px;
+
+}
+
+.container>.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*card*/
+
+.card {
+    width: 500px;
+    height: 600px;
+    border-radius: 8px;
+    margin: 20px 20px 0 20px;
+    overflow: hidden;
+    padding: 10px;
+    border: 2px solid rgb(3, 109, 82);
+    display: flex;
+    flex-direction: column;
+}
+
+.card>.content {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 0 0;
+}
+
+.card>.content>img {
+    width: 50%;
+    height: fit-content;
+    transition: 0.5s;
+    border-radius: 12px;
+}
+
+.card:hover>.content>img {
+    transform: scale(1.2);
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.info>p {
+    margin: 0;
+    padding: 20px 30px;
+    color: rgb(0, 0, 0);
+}
+
+.info>a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(154, 175, 194);
+    padding: 10px 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.info>a:hover {
+    background-color: rgb(7, 138, 72);
+}
+
+/*footer*/
+footer {
+    background-color: rgb(122, 118, 118);
+    padding: 10px;
+
+}
+
+footer>p {
+    color: rgb(3, 3, 66);
+}
+
+/*login*/
+
+.login-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    height: 600px;
+
+}
+
+form>.form-control {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    width: 70%;
+}
+
+.form-control>input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid green;
+    margin: 10px 0;
+    height: 55px;
+}
+
+form>button {
+    padding: 10px 30px;
+    border: 2px solid green;
+    border-radius: 8px;
+    background-color: rgb(156, 216, 216);
+    height: 50px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+form>button:hover {
+    background-color: aquamarine;
+}
